@@ -1,5 +1,6 @@
 %define		_name	burn
 Summary:	CD-Burning kioslave
+Summary(pl):	Wypalanie CD za po¶rednictwem kioslave
 Name:		kio_burn
 Version:	0.6
 Release:	0.1
@@ -19,10 +20,10 @@ Requires:	cdrtools-mkisofs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Burn is a package to let you burn CD or DVDs using Konqueror. Actually,
-you could in theory use it from any KDE program capable of opening and
-saving via KDE's ioslave system. However, Konqueror is probably the easiest
-way to burn discs.
+Burn is a package to let you burn CD or DVDs using Konqueror.
+Actually, you could in theory use it from any KDE program capable of
+opening and saving via KDE's ioslave system. However, Konqueror is
+probably the easiest way to burn discs.
 
 %prep
 %setup -q -n %{_name}-%{version}
