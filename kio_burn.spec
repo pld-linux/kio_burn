@@ -1,4 +1,9 @@
+#
+# Conditional build:
+%bcond_without	k3b		# without k3b to detect devices
+#
 %define		_name	burn
+#
 Summary:	CD-Burning kioslave
 Summary(pl):	Wypalanie CD za po¶rednictwem kioslave
 Name:		kio_burn
@@ -10,6 +15,7 @@ Source0:	http://www-users.york.ac.uk/~jrht100/burn/%{_name}-%{version}.tar.bz2
 # Source0-md5:	f54dc8c53803d3a056b14ce6580a4aab
 URL:		http://www-users.york.ac.uk/~jrht100/burn/
 BuildRequires:	audiofile-devel
+%{?with_k3b:BuildRequires:	k3b-devel}
 BuildRequires:	kdelibs-devel >= 3.3.2
 BuildRequires:	kdemultimedia-akode
 BuildRequires:	kdemultimedia-devel
@@ -37,8 +43,12 @@ do wypalania p³ytek.
 
 %build
 %configure \
-	--enable-final\
+%if "%{_lib}" == "lib64"
+	--enable-libsuffix=64 \
+%endif
+	--%{?debug:en}%{!?debug:dis}able-debug%{?debug:=full} \
 	--with-qt-libraries=%{_libdir}
+
 %{__make}
 
 %install
@@ -59,5 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde3/kio_burn.so
 %{_libdir}/kde3/kio_burn.la
 %{_datadir}/services/burn.protocol
+%{_datadir}/apps/kio_burn
 %{_datadir}/apps/konqueror/kpartplugins/kio_burn.rc
 %{_datadir}/apps/konqsidebartng/virtual_folders/services/burn.desktop
