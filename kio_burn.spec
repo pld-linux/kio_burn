@@ -25,6 +25,13 @@ Actually, you could in theory use it from any KDE program capable of
 opening and saving via KDE's ioslave system. However, Konqueror is
 probably the easiest way to burn discs.
 
+%description -l pl
+Burn to pakiet umo¿liwiaj±cy wypalanie p³yt CD i DVD przy u¿yciu
+Konquerora. W³a¶ciwie teoretycznie mo¿na go u¿ywaæ z dowolnego
+programu KDE potrafi±cego otwieraæ i zapisywaæ poprzez system KDE
+ioslave. Jednak Konqueror jest prawdopodobnie naj³atwiejszy w u¿yciu
+do wypalania p³ytek.
+
 %prep
 %setup -q -n %{_name}-%{version}
 
