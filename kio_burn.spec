@@ -7,12 +7,12 @@
 Summary:	CD-Burning kioslave
 Summary(pl):	Wypalanie CD za po¶rednictwem kioslave
 Name:		kio_burn
-Version:	0.7b
+Version:	0.7
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www-users.york.ac.uk/~jrht100/burn/%{_name}-%{version}.tar.bz2
-# Source0-md5:	f54dc8c53803d3a056b14ce6580a4aab
+# Source0-md5:	20223fbcfc9ab67767c0ad55359d1f75
 URL:		http://www-users.york.ac.uk/~jrht100/burn/
 BuildRequires:	audiofile-devel
 %{?with_k3b:BuildRequires:	k3b-devel}
