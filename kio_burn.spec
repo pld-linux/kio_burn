@@ -12,6 +12,7 @@ BuildRequires:	audiofile-devel
 BuildRequires:	kdelibs-devel >= 3.3
 BuildRequires:	kdemultimedia-akode
 BuildRequires:	kdemultimedia-devel
+BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	taglib-devel
 Requires:	cdrtools
 Requires:	cdrtools-mkisofs
