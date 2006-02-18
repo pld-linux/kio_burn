@@ -1,28 +1,22 @@
-#
-# Conditional build:
-%bcond_without	k3b		# without k3b to detect devices
-#
 %define		_name	burn
-#
+
 Summary:	CD-Burning kioslave
 Summary(pl):	Wypalanie CD za po¶rednictwem kioslave
 Name:		kio_burn
-Version:	0.7
+Version:	0.8
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://www-users.york.ac.uk/~jrht100/burn/%{_name}-%{version}.tar.bz2
-# Source0-md5:	20223fbcfc9ab67767c0ad55359d1f75
+# Source0-md5:	28ee1c4e2c78c8bd71809ca5d1d30472
 URL:		http://www-users.york.ac.uk/~jrht100/burn/
-BuildRequires:	audiofile-devel
-%{?with_k3b:BuildRequires:	k3b-devel}
-BuildRequires:	kdelibs-devel >= 3.3.2
-BuildRequires:	kdemultimedia-akode
-BuildRequires:	kdemultimedia-devel
+BuildRequires:	k3b-devel
+BuildRequires:	kdebase-devel >= 3.3.2
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	taglib-devel
 Requires:	cdrtools
 Requires:	cdrtools-mkisofs
+Requires:	konqueror
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -58,17 +52,14 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
-%find_lang %{name} --with-kde
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README TODO
-%attr(755,root,root) %{_libdir}/kde3/kio_burn.so
-%{_libdir}/kde3/kio_burn.la
+%doc AUTHORS ChangeLog
+%attr(755,root,root) %{_libdir}/kde3/*.so
+%{_libdir}/kde3/*.la
+%{_datadir}/apps/konqsidebartng/*/burnsidebar.desktop
 %{_datadir}/services/burn.protocol
-%{_datadir}/apps/kio_burn
-%{_datadir}/apps/konqueror/kpartplugins/kio_burn.rc
-%{_datadir}/apps/konqsidebartng/virtual_folders/services/burn.desktop
+%{_kdedocdir}/en/burn
