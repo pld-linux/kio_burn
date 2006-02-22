@@ -14,8 +14,8 @@ BuildRequires:	k3b-devel
 BuildRequires:	kdebase-devel >= 3.3.2
 BuildRequires:	rpmbuild(macros) >= 1.129
 BuildRequires:	taglib-devel
-Requires:	cdrtools
-Requires:	cdrtools-mkisofs
+Requires:	cdrecord
+Requires:	mkisofs
 Requires:	konqueror
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
