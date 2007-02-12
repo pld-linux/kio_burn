@@ -1,7 +1,7 @@
 %define		_name	burn
 
 Summary:	CD-Burning kioslave
-Summary(pl):	Wypalanie CD za po∂rednictwem kioslave
+Summary(pl.UTF-8):   Wypalanie CD za po≈õrednictwem kioslave
 Name:		kio_burn
 Version:	0.8
 Release:	1
@@ -25,12 +25,12 @@ Actually, you could in theory use it from any KDE program capable of
 opening and saving via KDE's ioslave system. However, Konqueror is
 probably the easiest way to burn discs.
 
-%description -l pl
-Burn to pakiet umoøliwiaj±cy wypalanie p≥yt CD i DVD przy uøyciu
-Konquerora. W≥a∂ciwie teoretycznie moøna go uøywaÊ z dowolnego
-programu KDE potrafi±cego otwieraÊ i zapisywaÊ poprzez system KDE
-ioslave. Jednak Konqueror jest prawdopodobnie naj≥atwiejszy w uøyciu
-do wypalania p≥ytek.
+%description -l pl.UTF-8
+Burn to pakiet umo≈ºliwiajƒÖcy wypalanie p≈Çyt CD i DVD przy u≈ºyciu
+Konquerora. W≈Ça≈õciwie teoretycznie mo≈ºna go u≈ºywaƒá z dowolnego
+programu KDE potrafiƒÖcego otwieraƒá i zapisywaƒá poprzez system KDE
+ioslave. Jednak Konqueror jest prawdopodobnie naj≈Çatwiejszy w u≈ºyciu
+do wypalania p≈Çytek.
 
 %prep
 %setup -q -n %{_name}-%{version}
