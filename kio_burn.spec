@@ -1,7 +1,7 @@
 %define		_name	burn
 
 Summary:	CD-Burning kioslave
-Summary(pl.UTF-8):   Wypalanie CD za pośrednictwem kioslave
+Summary(pl.UTF-8):	Wypalanie CD za pośrednictwem kioslave
 Name:		kio_burn
 Version:	0.8
 Release:	1
